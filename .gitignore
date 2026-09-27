@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Model weights and data — these live on the Hub, not in git
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+model_clean/
+outputs/
+runs/
+
+# Artifacts
+*.zip
+*.jsonl
+report.json
+
+# Sample images pulled from CORD for local testing
+receipt_*.png
+receipt_*.jpg
+
+# ...but the committed evidence for the reported result is kept
+!results/*.jsonl
+!results/report.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
