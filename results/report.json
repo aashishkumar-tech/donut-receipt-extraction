@@ -1,0 +1,100 @@
+{
+  "dataset": "naver-clova-ix/cord-v2 (summary fields)",
+  "fields": [
+    "total_price",
+    "cashprice",
+    "changeprice",
+    "subtotal_price",
+    "tax_price",
+    "discount_price"
+  ],
+  "test_docs": 100,
+  "ours": {
+    "precision": 0.9076923076923077,
+    "recall": 0.8939393939393939,
+    "f1": 0.900763358778626
+  },
+  "reference": {
+    "model": "naver-clova-ix/donut-base-finetuned-cord-v2",
+    "precision": 0.9845679012345679,
+    "recall": 0.9666666666666667,
+    "f1": 0.9755351681957187
+  },
+  "gate": {
+    "metric": "denoised_laplacian",
+    "lift_p90": -0.02576335877862601,
+    "operating_point": {
+      "pct": 0,
+      "threshold": 1.8375373420296093,
+      "coverage": 1.0,
+      "auto_f1": 0.900763358778626
+    },
+    "meets_targets": true,
+    "sweep": [
+      {
+        "pct": 0,
+        "threshold": 1.8375373420296093,
+        "coverage": 1.0,
+        "auto_f1": 0.900763358778626
+      },
+      {
+        "pct": 10,
+        "threshold": 4.736601101342336,
+        "coverage": 0.9,
+        "auto_f1": 0.8961937716262977
+      },
+      {
+        "pct": 20,
+        "threshold": 10.161273807264472,
+        "coverage": 0.8,
+        "auto_f1": 0.8936170212765957
+      },
+      {
+        "pct": 30,
+        "threshold": 19.23087746957408,
+        "coverage": 0.7,
+        "auto_f1": 0.8948545861297538
+      },
+      {
+        "pct": 40,
+        "threshold": 30.521530447324803,
+        "coverage": 0.6,
+        "auto_f1": 0.9194805194805195
+      },
+      {
+        "pct": 50,
+        "threshold": 49.596833225107986,
+        "coverage": 0.5,
+        "auto_f1": 0.9274447949526814
+      },
+      {
+        "pct": 60,
+        "threshold": 79.82270352289311,
+        "coverage": 0.4,
+        "auto_f1": 0.9266409266409266
+      },
+      {
+        "pct": 70,
+        "threshold": 112.79785738869793,
+        "coverage": 0.3,
+        "auto_f1": 0.9025641025641026
+      },
+      {
+        "pct": 80,
+        "threshold": 156.43636393870636,
+        "coverage": 0.2,
+        "auto_f1": 0.931297709923664
+      },
+      {
+        "pct": 90,
+        "threshold": 199.20530463163342,
+        "coverage": 0.1,
+        "auto_f1": 0.875
+      }
+    ]
+  },
+  "previous_use_case": {
+    "bank_statements_blended_f1": 0.026,
+    "clean_gated_f1": 0.054
+  }
+}

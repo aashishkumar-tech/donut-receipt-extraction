@@ -1,0 +1,22 @@
+# Runtime dependencies for serve.py (CPU inference).
+#
+#   python -m venv .venv
+#   .\.venv\Scripts\Activate.ps1          # Windows
+#   source .venv/bin/activate             # macOS / Linux
+#   pip install -r requirements.txt
+#   uvicorn serve:app --port 8000
+#
+# For CPU-only torch (~200 MB instead of ~2.5 GB), install it first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# Training is not covered here -- that runs on Kaggle, see notebooks/.
+
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9      # required by FastAPI for file uploads
+
+torch>=2.0
+transformers>=4.40
+sentencepiece>=0.2           # Donut tokenizer backend
+protobuf>=4.25               # required by sentencepiece
+pillow>=10.0
